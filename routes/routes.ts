@@ -4,4 +4,5 @@ export enum PublicRoutes {
   LOGIN = "login",
   REGISTER = "register",
   FAVORITES = "favorites",
+  PRODUCT_INFO = "product_info",
 }
