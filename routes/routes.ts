@@ -5,4 +5,5 @@ export enum PublicRoutes {
   REGISTER = "register",
   FAVORITES = "favorites",
   PRODUCT_INFO = "product_info",
+  SEARCH = "search",
 }

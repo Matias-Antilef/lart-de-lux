@@ -7,11 +7,15 @@ function FavoritesPage() {
   const favorites = useSelector((state: RootState) => state.favorites.items);
 
   return (
-    <div>
+    <div className="bg-gray-400">
       <h1>FavoritesPage</h1>
       <ul>
         {favorites.map((item) => (
-          <li key={item.id}> {item.title} </li>
+          <div key={item.id}>
+            <li> {item.title} </li>
+            <li> {item.image_main} </li>
+            <li> {item.price} </li>
+          </div>
         ))}
       </ul>
     </div>

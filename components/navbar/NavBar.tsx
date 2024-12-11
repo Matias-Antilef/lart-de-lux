@@ -1,6 +1,7 @@
 import { PublicRoutes } from "@/routes/routes";
+import styles from "./navbar.module.css";
 import {
-  BarChartHorizontalBig,
+  ChartBarBig,
   Heart,
   Search,
   ShoppingBag,
@@ -10,17 +11,16 @@ import Link from "next/link";
 
 function NavBar() {
   return (
-    <nav className="z-50 flex justify-between px-10 h-16 items-center bg-transparent fixed text-white w-screen left-0 top-0">
+    <nav className={styles.navbar}>
       <div className="flex gap-4">
-        <BarChartHorizontalBig />
-        <div className="flex gap-1">
+        <div className={styles.find_product}>
           <Search />
-          <p>Buscar producto</p>
+          <input type="text" placeholder="Buscar producto" />
         </div>
       </div>
-      <h1 className="text-3xl absolute text-center  w-screen left-0  ">
+      <Link href="/" className={styles.title_link}>
         L&apos;art de Luxe
-      </h1>
+      </Link>
       <div className="flex gap-4">
         <Link href={`/${PublicRoutes.FAVORITES}`}>
           <Heart className="relative" />
@@ -29,6 +29,7 @@ function NavBar() {
         <Link href={`/${PublicRoutes.CART}`}>
           <ShoppingBag className="relative" />
         </Link>
+        <ChartBarBig />
       </div>
     </nav>
   );
